@@ -1,0 +1,12 @@
+@font-face {
+    font-family: PoiretOne;
+    src: url('fonts/PoiretOne-Regular.ttf') format('truetype'),
+    url('fonts/PoiretOne-Regular.woff2') format('woff2'),
+    url('fonts/PoiretOne-Regular.woff') format('woff');
+}
+
+* {
+    font-family: PoiretOne;
+    font-size: 26px;
+    font-weight: 700;
+}
