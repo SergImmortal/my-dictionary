@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    padding: 0 5%;
+    background-color: #3d6a66;
+}
+
+h1 {
+    font-size: 40px;
+    color: #dcdcdd;
+}
+
+.btn-sign {
+    width: 5%;
+    cursor: pointer;
+    color: #dcdcdd;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.btn-sign:focus {
+    outline: 0;
+}

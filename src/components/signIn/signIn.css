@@ -1,0 +1,65 @@
+.form-signIn {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-form {
+    font-size: 30px;
+    margin-bottom: 5%;
+}
+
+.input {
+    height: 40px;
+    padding-left: 20px;
+    margin-bottom: 5%;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    background: #dcdcdd;
+    outline: none;
+    cursor: pointer;
+}
+
+.admin-btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-btn {
+    position: relative;
+    width: 200px;
+    height: 40px;
+    color: #000000;
+    background: #dcdcdd;
+    border: 2px solid transparent;
+    transition: all .35s;
+    cursor: pointer;
+}
+
+.effect-btn {
+    position: relative;
+    z-index: 2;
+}
+
+.form-btn:after {
+    position: absolute;
+    content: "";
+    top: -2px;
+    left: -2px;
+    width: 0;
+    height: 40px;
+    background: #3d6a66;
+    transition: all .35s;
+}
+
+.form-btn:hover {
+    color: #dcdcdd;
+}
+
+.form-btn:hover:after, .btn-sign-up:hover:after {
+    width: 200px;
+}
+
+.btn-sign-up:after {
+    background: #69849b;
+}
