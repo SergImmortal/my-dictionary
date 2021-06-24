@@ -1,24 +1,41 @@
-import React, {useState} from 'react'
-import {Link} from "react-router-dom";
+import React, { useState } from 'react'
+import { Link } from "react-router-dom";
 import './signIn.css'
 
 
-const SignIn = ({toggle}) => {
-    const [formData, setFormData] = useState({
+const SignIn = ({ toggle }) => {
+    const [formDataSet, setFormData] = useState({
         email: "",
         password: ""
     });
 
     const updateFormData = event =>
         setFormData({
-            ...formData,
+            ...formDataSet,
             [event.target.name]: event.target.value
         });
 
-    const { email, password } = formData;
+    const { email, password } = formDataSet;
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        fetch('https://words.pozhdema.in.ua/user/login',
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: new URLSearchParams({
+                    'email': email,
+                    'password': password
+                })
+            }).then(data => data.json())
+            .then(data => {
+                if (!data.status) {
+                    alert(data.msg);
+                }
+                console.log(data);
+            });
     };
 
     return (
